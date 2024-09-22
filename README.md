@@ -33,54 +33,43 @@ sudo wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/Instalador-de
 
 ## :rocket: Modo de Uso
 
-Ejecute el script simplemente ejecuta el siguiente comando `wifiteutility`  en tu terminal y presiona Enter.
+Ejecute el script simplemente ejecuta el siguiente comando `kptools`  en tu terminal y presiona Enter.
 
 ```bash
-wifiteutility
+kptools
 ```
 
 ## :bookmark_tabs: Notas
-Este script permite ejecutar varios comandos útiles para auditorías Wi-Fi, incluyendo:
+Este script permite ejecutar varios comandos útiles para actualizar tu sistema y herramientas, incluyendo:
 
-- Instalar/Actualizar Wifite: El script se encarga de instalar o actualizar la última versión de Wifite, garantizando siempre el acceso a una de las herramientas más potentes para auditorías inalámbricas.
-- Crear Diccionario Personalizado: El script permite generar un diccionario a partir de múltiples listas de palabras, optimizando su uso para ataques de fuerza bruta en auditorías.
-- Instalar Herramientas Esenciales: El script gestiona la instalación de herramientas complementarias, como hcxdumptool, libpcap, y otras esenciales para auditorías Wi-Fi.
-- Instalar Drivers Wi-Fi: El script facilita la instalación de drivers para adaptadores Wi-Fi, como rtl8814au, rtl88xxau, asegurando la compatibilidad con auditorías.
-- Automatización Total: El script automatiza todo el proceso de instalación, eliminando la necesidad de realizar configuraciones manuales.
-- Modularidad: El script te permite seleccionar qué herramientas deseas instalar, adaptándose a tus necesidades específicas.
-- Soporte Extensivo de Drivers: El script garantiza la compatibilidad con una amplia gama de adaptadores Wi-Fi frecuentemente utilizados en pentesting.
-- Instalar Pyrit: Instala o actualiza Pyrit para realizar ataques a redes inalámbricas utilizando la aceleración por GPU.
+- Actualización del Sistema: Actualiza la lista de paquetes disponibles y actualiza los instalados.
+- Full Upgrade: Realiza una actualización completa de todos los paquetes instalados en el sistema.
+
+**Instalación de Herramientas**:
+
+- Pluma: Editor de texto ligero para entornos de escritorio MATE.
+- ipinfo: Herramienta CLI para obtener información detallada sobre IPs.
+- Tor Browser: Navegador centrado en la privacidad y seguridad.
+- Gedit: Editor de texto oficial del escritorio GNOME.
+- Mousepad: Editor de texto ligero.
+- LibreWolf: Navegador web centrado en la privacidad.
+- Sublime Text: Editor de código multiplataforma.
 
 ## :star2: Características 
 
-- **Instalación simplificada de Wifite y herramientas esenciales**:
-  - Actualiza o instala Wifite fácilmente con solo un par de clics.
-  - Instalación de herramientas complementarias como hcxdumptool, hcxtools, libpcap, entre otras.
-
-- **Creación automática de diccionarios personalizados**:
-  - Combina varias listas de palabras preexistentes y genera un diccionario optimizado para pruebas de penetración.
-  - Filtra palabras de longitud mínima para mayor efectividad en ataques de fuerza bruta.
-
-- **Gestión de drivers de adaptadores Wi-Fi**:
-  - Permite la instalación rápida de drivers para adaptadores como rtl8188eus, rtl8814au, rtl88xxau, entre otros.
-  - Facilita la instalación de headers y otros módulos del kernel necesarios para la compilación de drivers.
-
-- **Interfaz gráfica amigable**:
-  - Incluye una GUI simple que facilita la navegación por las distintas opciones del script.
-  - Banner personalizado que muestra información relevante sobre las herramientas utilizadas.
-
-- **Personalización y mantenimiento de Pyrit**:
-  - Instala o actualiza Pyrit, una potente herramienta para ataques a redes inalámbricas con GPU.
-  - Incluye comandos de instalación y compilación de Pyrit directamente desde el código fuente.
+- Automatización Completa: Facilita la instalación de múltiples herramientas con un solo script.
+- Instalación Personalizable: Puedes añadir o quitar herramientas según tus necesidades.
+- Actualización del Sistema: Garantiza que tu sistema esté siempre al día antes de instalar nuevas herramientas.
 
 ## :hammer_and_wrench: Requisitos 
 
-- Sistema Operativo: Linux/Unix
-- Dependencias: Bash, Wifite, y otras herramientas de auditoría Wi-Fi.
+- Sistema Operativo: Linux (Debian/Ubuntu)
+- Permisos: Debes ejecutar el script con permisos de root.
+- Dependencias: apt, curl, gnupg, wget.
 
 ## :memo: Personalización
 
-Puedes ajustar los comandos y configuraciones del script según tus necesidades modificando el archivo `/opt/Wifite-Utility/wifite-utility.sh`
+Puedes ajustar los comandos y configuraciones del script según tus necesidades modificando el archivo `/opt/Instalador-de-Paqueterias/kptools.sh`
 
 ## :open_file_folder: Estructura del Repositorio
 
@@ -96,8 +85,6 @@ Puedes ajustar los comandos y configuraciones del script según tus necesidades 
 | :page_facing_up: | wifite_help_ES.txt  | Archivo de ayuda en español para Wifite   |
 
 ## :email: Contacto 
-* :busts_in_silhouette: **derv82**: [GitHub](https://github.com/derv82/wifite) - Desarrollador  Wifite
-* :busts_in_silhouette: **kimocoder**: [GitHub](https://github.com/kimocoder/wifite2) - Actualización de versión Wifite
-* :busts_in_silhouette: **Dzhoni_dev**: [GitHub](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/Wifite-Utility) - Colaborador
+* :busts_in_silhouette: **Dzhoni_dev**: [GitHub](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/Instalador-de-Paqueterias) - Desarrollador Instalador de Paqueterías 
 
 ☆ https://t.me/AAAAAEXQOSyIpN2JZ0ehUQ [  ⃘⃤꙰✰ ] ☆
