@@ -1,4 +1,4 @@
-﻿![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/Wifite-Utility/blob/main/Imagenes/Wifite-Utility.png)
+﻿![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/Instalador-de-Paqueterias/blob/main/Imagenes/Instalador-de-Paqueterias.png)
 
 # Wifite Utility :octocat: 
 ## :information_source: Descripción
