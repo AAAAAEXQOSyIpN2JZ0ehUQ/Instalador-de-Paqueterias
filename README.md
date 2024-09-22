@@ -75,13 +75,12 @@ Puedes ajustar los comandos y configuraciones del script según tus necesidades 
 
 | Icono            | Nombre              | Descripción                               |
 |------------------|---------------------|-------------------------------------------|
-| :file_folder:    | imágenes            | Carpeta para imágenes                     |
+| :file_folder:    | imágenes            | Carpeta para imágenes del proyecto        |
 | :page_facing_up: | .gitattributes      | Archivo para configuración de Git         |
-| :page_facing_up: | LICENSE             | Archivo de licencia                       |
+| :page_facing_up: | LICENSE             | Archivo de licencia del proyecto          |
 | :book:           | README.md           | Archivo de documentación principal        |
-| :page_facing_up: | Wifite-Utility.sh   | Script principal de utilidad Wifite       |
-| :package:        | install.sh          | Script de instalación                     |
-| :page_facing_up: | wifite_help_ES.sh   | Archivo de ayuda en español para Wifite   |
+| :package:        | install.sh          | Script de instalación automatizada        |
+| :page_facing_up: | kptools.sh          | Herramienta de utilidades                 |
 | :page_facing_up: | wifite_help_ES.txt  | Archivo de ayuda en español para Wifite   |
 
 ## :email: Contacto 
