@@ -302,6 +302,28 @@ install_sublist3r() {
     echo -e "\n${checkmark} ${green}Sublist3r instalado.${reset}"
 }
 
+# Función para instalar Sublist3r
+install_autoBspwm_S4vitar() {
+    echo -e "\n${info} ${cyan}Instalando Auto BSPWN...${reset}\n"
+    # https://github.com/yorkox0/autoBspwm
+    cd
+    git clone https://github.com/yorkox0/autoBspwm
+    cd autoBspwm/
+    python3 main.py
+    echo -e "\n${checkmark} ${green}Sublist3r Auto BSPWN.${reset}"
+}
+
+# Función para instalar Sublist3r
+install_auto-bspwm_S4vitar() {
+    echo -e "\n${info} ${cyan}Instalando Auto BSPWN...${reset}\n"
+    # https://github.com/r1vs3c/auto-bspwm
+    cd
+    git clone https://github.com/r1vs3c/auto-bspwm.git
+    cd auto-bspwm
+    chmod +x setup.sh
+    ./setup.sh
+    echo -e "\n${checkmark} ${green}Sublist3r Auto BSPWN.${reset}"
+}
 
 # Menú principal modificado
 while true $x != "ok"
@@ -310,7 +332,23 @@ do
 # Mostrar banner
 fun_banner
 
-    echo -e "\n${bold}${cyan} Seleccione una opción del menú:               Rev: v0.0.01-dev Arch: amd64${reset}"
+# Función de actualización
+P_SERVER="https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/Instalador-de-Paqueterias/main/Install/"
+v1=$(curl -sSL "${P_SERVER}/versionact")
+v2=$(cat /opt/Instalador-de-Paqueterias/Install/versionact)
+
+txt01="Tu versión está actualizada"
+txt02="¡Hay una actualización disponible!"
+
+# Compara las versiones y define el mensaje
+if [[ $v1 = $v2 ]]; then
+    versionSCT="${green}${txt01} ${cyan}$v2${reset}"
+else
+    versionSCT="${red}${txt02} ${cyan}$v1${reset}"
+fi
+
+    echo -e "\n${bold}${cyan} Seleccione una opción del menú:               Rev: ${green} Arch: amd64 ${reset}"
+    echo -e "                                              ${green} $versionSCT ${reset}"
     echo -e "\n${indicator} ${yellow}Key  Menú opción:                    ${yellow}Descripción:${reset}"
     echo -e "${indicator} ${yellow}---  ------------                    ${yellow}------------${reset}"
     echo -e "${indicator} ${green}1. ${white} Actualizar el sistema            ${cyan}(Realiza una actualización de los repositorios)${reset}"
@@ -328,6 +366,9 @@ fun_banner
     echo -e "${indicator} ${green}13.${white} Instalar Kali Undercover Mode    ${cyan}(Cambia tu entorno de Kali a uno similar a Windows)${reset}"
     echo -e "${indicator} ${green}14.${white} Instalar ExifTool                ${cyan}(Herramienta para analizar y editar metadatos en archivos)${reset}"
     echo -e "${indicator} ${green}15.${white} Instalar Sublist3r               ${cyan}(Herramienta de enumeración de subdominios)${reset}"
+    echo -e "${bar}"
+    echo -e "${indicator} ${green}16.${white} Instalar Auto BSPWN By Yorkox    ${cyan}(Entorno de escritorio profesional para Kali Linux, ParrotOS,Ubuntu)${reset}"
+    echo -e "${indicator} ${green}17.${white} Instalar Auto BSPWN By R1vs3c    ${cyan}(entorno de escritorio profesional para Kali Linux)${reset}"
     echo -e "${bar}"
     echo -e "${indicator} ${green}0.${white}  Salir                            ${cyan}(Salir del script)${reset}"
     echo -e "\n${barra}"
@@ -405,13 +446,23 @@ fun_banner
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
             ;;
         14)
-            echo -e "\n${process} ${cyan}Instalando exiftoolss...${reset}"
+            echo -e "\n${process} ${cyan}Instalando exiftools...${reset}"
             install_exiftool
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
             ;;
         15)
             echo -e "\n${process} ${cyan}Instalando Sublist3r...${reset}"
             install_sublist3r
+            echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
+            ;;
+        16)
+            echo -e "\n${process} ${cyan}Instalando Auto BSPWN By Yorkox...${reset}"
+            install_autoBspwm_S4vitar
+            echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
+            ;;
+        17)
+            echo -e "\n${process} ${cyan}Instalando Auto BSPWN By R1vs3c...${reset}"
+            install_auto-bspwm_S4vitar
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
             ;;
         0)
