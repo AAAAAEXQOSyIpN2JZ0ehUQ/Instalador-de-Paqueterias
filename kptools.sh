@@ -295,6 +295,14 @@ install_exiftool() {
     echo -e "\n${checkmark} ${green}kali exiftool instalado.${reset}"
 }
 
+# Función para instalar Sublist3r
+install_sublist3r() {
+    echo -e "\n${info} ${cyan}Instalando Sublist3r...${reset}\n"
+    sudo apt-get install -y sublist3r
+    echo -e "\n${checkmark} ${green}Sublist3r instalado.${reset}"
+}
+
+
 # Menú principal modificado
 while true $x != "ok"
 do
@@ -319,7 +327,7 @@ fun_banner
     echo -e "${indicator} ${green}12.${white} Habilitar OpenSSH Server         ${cyan}(Configurar OpenSSH Server ${white}-o --oss${cyan})${reset}"
     echo -e "${indicator} ${green}13.${white} Instalar Kali Undercover Mode    ${cyan}(Cambia tu entorno de Kali a uno similar a Windows)${reset}"
     echo -e "${indicator} ${green}14.${white} Instalar ExifTool                ${cyan}(Herramienta para analizar y editar metadatos en archivos)${reset}"
-
+    echo -e "${indicator} ${green}15.${white} Instalar Sublist3r               ${cyan}(Herramienta de enumeración de subdominios)${reset}"
     echo -e "${bar}"
     echo -e "${indicator} ${green}0.${white}  Salir                            ${cyan}(Salir del script)${reset}"
     echo -e "\n${barra}"
@@ -399,6 +407,11 @@ fun_banner
         14)
             echo -e "\n${process} ${cyan}Instalando exiftoolss...${reset}"
             install_exiftool
+            echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
+            ;;
+        15)
+            echo -e "\n${process} ${cyan}Instalando Sublist3r...${reset}"
+            install_sublist3r
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
             ;;
         0)
