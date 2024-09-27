@@ -229,7 +229,7 @@ install_sublime_text_4180() {
 
     # Opcion 1
     
-    sudo cp /opt/sublime_text/sublime_text ./sublime_text.old
+    sudo cp /opt/sublime_text/sublime_text ./sublime_text.old 
 
     sudo sed -i 's/\x80\x79\x05\x00\x0F\x94\xC2/\xC6\x41\x05\x01\xB2\x00\x90/g' /opt/sublime_text/sublime_text
 
@@ -281,6 +281,20 @@ pimp_my_kali () {
 
 }
 
+# Función para instalar kali undercover
+install_kali-undercover() {
+    echo -e "\n${info} ${cyan}Instalando kali undercover...${reset}\n"
+    sudo apt-get install -y kali-undercover
+    echo -e "\n${checkmark} ${green}kali undercover instalado.${reset}"
+}
+
+# Función para instalar kali exiftool
+install_exiftool() {
+    echo -e "\n${info} ${cyan}Instalando kali exiftool...${reset}\n"
+    sudo apt-get install -y exiftool
+    echo -e "\n${checkmark} ${green}kali exiftool instalado.${reset}"
+}
+
 # Menú principal modificado
 while true $x != "ok"
 do
@@ -301,8 +315,11 @@ fun_banner
     echo -e "${indicator} ${green}8. ${white} Instalar LibreWolf               ${cyan}(Navegador orientado a la privacidad)${reset}"
     echo -e "${indicator} ${green}9. ${white} Instalar Sublime Text 4180       ${cyan}(Editor de texto avanzado)${reset}"
     echo -e "${indicator} ${green}10.${white} Instalar Sublime Text 4169       ${cyan}(Editor de texto avanzado)${reset}"
-    echo -e "${indicator} ${green}11.${white} Instalar Pimp My Kali            ${cyan}(Optimización y personalización ${white}-p --pmk ${red}(Ref. ${yellow}0n 9 !y${red})${cyan})${reset}"
+    echo -e "${indicator} ${green}11.${white} Instalar Pimp My Kali            ${cyan}(Optimización y personalización ${white}-p --pmk ${red}(${green}Ref. ${white}0n 9 !y${red})${cyan})${reset}"
     echo -e "${indicator} ${green}12.${white} Habilitar OpenSSH Server         ${cyan}(Configurar OpenSSH Server ${white}-o --oss${cyan})${reset}"
+    echo -e "${indicator} ${green}13.${white} Instalar Kali Undercover Mode    ${cyan}(Cambia tu entorno de Kali a uno similar a Windows)${reset}"
+    echo -e "${indicator} ${green}14.${white} Instalar ExifTool                ${cyan}(Herramienta para analizar y editar metadatos en archivos)${reset}"
+
     echo -e "${bar}"
     echo -e "${indicator} ${green}0.${white}  Salir                            ${cyan}(Salir del script)${reset}"
     echo -e "\n${barra}"
@@ -374,6 +391,16 @@ fun_banner
             sudo service ssh status
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
             ;;
+        13)
+            echo -e "\n${process} ${cyan}Instalando Kali Undercover...${reset}"
+            install_kali-undercover
+            echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
+            ;;
+        14)
+            echo -e "\n${process} ${cyan}Instalando exiftoolss...${reset}"
+            install_exiftool
+            echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
+            ;;
         0)
             echo -e "\n${info} ${cyan}Saliendo...${reset}"
             exit 0
@@ -385,6 +412,13 @@ fun_banner
             ;;
         -p | --pmk)
             cd /opt/pimpmykali && sudo ./pimpmykali.sh
+            echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
+            ;;
+        -k | --kuc)
+            # sudo apt-get install -y xfce4-terminal gnome-terminal xterm
+            # xfce4-terminal -- zsh -c "kali-undercover; exec zsh"
+            # gnome-terminal -- zsh -c "kali-undercover; exec zsh"
+            # xterm -e "zsh -c 'kali-undercover; exec zsh'"
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
             ;;
         *)
