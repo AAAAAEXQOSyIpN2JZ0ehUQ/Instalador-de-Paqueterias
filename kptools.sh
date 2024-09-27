@@ -42,13 +42,6 @@ indicator="${red}==>${cyan}"
 barra="${blue}|--------------------------------------------|${reset}"
 bar="${yellow}----------------------------------------------${reset}"
 
-# Comprobación de permisos de root
-[[ "$(whoami)" != "root" ]] && {
-    echo -e "\n${yellow}[${red}Error${yellow}] ${white}- ${yellow}Necesitas ejecutar esto como administrador (${red}root${yellow})${reset}"
-    echo -e "\n${green} sudo $0 ${reset}"
-    exit 0
-}
-
 main_menu () {
 
 fun_bannerOFF () {
@@ -105,13 +98,6 @@ fun_banner () {
     echo -e "     / ///// ========= === /         "
     echo -e "    (__________________[_@)          "
     echo ""
-}
-
-# Comprobación de permisos de root
-[[ "$(whoami)" != "root" ]] && {
-    echo -e "\n${yellow}[${red}Error${yellow}] ${white}- ${yellow}Necesitas ejecutar esto como administrador (${red}root${yellow})${reset}"
-    echo -e "\n${green} sudo $0 ${reset}"
-    exit 0
 }
 
 # Función para actualizar el sistema
@@ -307,10 +293,14 @@ install_autoBspwm_S4vitar() {
     echo -e "\n${info} ${cyan}Instalando Auto BSPWN...${reset}\n"
     # https://github.com/yorkox0/autoBspwm
     cd
+    cd Desktop
     git clone https://github.com/yorkox0/autoBspwm
     cd autoBspwm/
-    python3 main.py
-    echo -e "\n${checkmark} ${green}Sublist3r Auto BSPWN.${reset}"
+    echo -e "\n${info} ${yellow}Debes abrir una nueva terminal y ejecutar:${reset} ${bold}${cyan}python3 main.py${reset}"
+    echo -e "\n${info} ${yellow}Ruta: cd /home/$(whoami)/Desktop/autoBspwm${reset}"
+    # xterm -geometry 160x40 -e "zsh -c 'python3 main.py; exec zsh'"
+    # python3 main.py
+    echo -e "\n${checkmark} ${green}Auto BSPWN instalado.${reset}"
 }
 
 # Función para instalar Sublist3r
@@ -318,11 +308,12 @@ install_auto-bspwm_S4vitar() {
     echo -e "\n${info} ${cyan}Instalando Auto BSPWN...${reset}\n"
     # https://github.com/r1vs3c/auto-bspwm
     cd
+    cd Desktop
     git clone https://github.com/r1vs3c/auto-bspwm.git
     cd auto-bspwm
     chmod +x setup.sh
     ./setup.sh
-    echo -e "\n${checkmark} ${green}Sublist3r Auto BSPWN.${reset}"
+    echo -e "\n${checkmark} ${green}Auto BSPWN instalado.${reset}"
 }
 
 # Menú principal modificado
