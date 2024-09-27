@@ -1,6 +1,6 @@
 ﻿![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/Instalador-de-Paqueterias/blob/main/Imagenes/Instalador-de-Paqueterias.png)
 
-# Wifite Utility :octocat: 
+# Instalador de Paqueterias :octocat: 
 ## :information_source: Descripción
 Este es un instalador personalizado diseñado para automatizar la instalación de varias 
 herramientas de desarrollo y utilidades en sistemas basados en Debian y Ubuntu. El script 
