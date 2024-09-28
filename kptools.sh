@@ -305,6 +305,7 @@ install_autoBspwm_S4vitar() {
     cd Desktop
     git clone https://github.com/yorkox0/autoBspwm
     cd autoBspwm/
+    chmod +x main.py
     echo -e "\n${info} ${yellow}Debes abrir una nueva terminal y ejecutar:${reset} ${bold}${cyan}python3 main.py${reset}"
     echo -e "\n${info} ${yellow}Ruta: cd /home/$(whoami)/Desktop/autoBspwm${reset}"
     # xterm -geometry 160x40 -e "zsh -c 'python3 main.py; exec zsh'"
@@ -321,7 +322,9 @@ install_auto-bspwm_S4vitar() {
     git clone https://github.com/r1vs3c/auto-bspwm.git
     cd auto-bspwm
     chmod +x setup.sh
-    ./setup.sh
+    echo -e "\n${info} ${yellow}Debes abrir una nueva terminal y ejecutar:${reset} ${bold}${cyan}python3 main.py${reset}"
+    echo -e "\n${info} ${yellow}Ruta: cd /home/$(whoami)/Desktop/autoBspwm${reset}"
+    # ./setup.sh
     echo -e "\n${checkmark} ${green}Auto BSPWN instalado.${reset}"
 }
 
@@ -474,11 +477,8 @@ fi
             cd /opt/pimpmykali && sudo ./pimpmykali.sh
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
             ;;
-        -k | --kuc)
-            # sudo apt-get install -y xfce4-terminal gnome-terminal xterm
-            # xfce4-terminal -- zsh -c "kali-undercover; exec zsh"
-            # gnome-terminal -- zsh -c "kali-undercover; exec zsh"
-            # xterm -e "zsh -c 'kali-undercover; exec zsh'"
+        -a | --auto-bspwm)
+            cd /home/$(whoami)/Desktop/auto-bspwm && ./setup.sh
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
             ;;
         *)
