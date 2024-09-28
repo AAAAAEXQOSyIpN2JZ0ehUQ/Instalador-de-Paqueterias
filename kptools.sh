@@ -267,6 +267,15 @@ pimp_my_kali () {
 
 }
 
+install_OpenSSH_Server() {
+    echo -e "\n${info} ${cyan}Instalando OpenSSH Server...${reset}"
+    # Configuración SSH en Kali Linux
+    # https://medium.com/@InzenSecure/ssh-configuration-in-kali-linux-3f7c456560a9
+    sudo apt-get install openssh-server
+    sudo service ssh start 
+    sudo service ssh status
+}
+
 # Función para instalar kali undercover
 install_kali-undercover() {
     echo -e "\n${info} ${cyan}Instalando kali undercover...${reset}\n"
@@ -423,12 +432,8 @@ fi
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
             ;;
         12 )
-            echo -e "\n${process} ${cyan}Habilitando OpenSSH Server...${reset}"
-            # Configuración SSH en Kali Linux
-            # https://medium.com/@InzenSecure/ssh-configuration-in-kali-linux-3f7c456560a9
-            sudo apt-get install openssh-server
-            sudo service ssh start 
-            sudo service ssh status
+            echo -e "\n${process} ${cyan}Instalando OpenSSH Server...${reset}"
+            install_OpenSSH_Server
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
             ;;
         13)
