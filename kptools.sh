@@ -328,6 +328,16 @@ install_auto-bspwm_S4vitar() {
     echo -e "\n${checkmark} ${green}Auto BSPWN instalado.${reset}"
 }
 
+# Función para mostrar ayuda
+show_help() {
+    echo -e "\n${green}Opciones disponibles:${green}\n"
+    echo -e "  -o | --oss             Iniciar el servicio SSH"
+    echo -e "  -p | --pmk             Ejecutar PimpMyKali"
+    echo -e "  -a | --auto-bspwm      Ejecutar Auto BSPWM"
+    echo -e "  -h | --help            Mostrar este mensaje de ayuda"
+    echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
+}
+
 # Menú principal modificado
 while true $x != "ok"
 do
@@ -480,6 +490,9 @@ fi
         -a | --auto-bspwm)
             cd /home/$(whoami)/Desktop/auto-bspwm && ./setup.sh
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
+            ;;
+        -h | --help)
+            show_help
             ;;
         *)
             echo -e "\n${error} ${red}Opción no válida, por favor intente de nuevo.${reset}"
