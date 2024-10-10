@@ -42,9 +42,10 @@ indicator="${red}==>${cyan}"
 barra="${blue}|--------------------------------------------|${reset}"
 bar="${yellow}----------------------------------------------${reset}"
 
-main_menu () {
+# menú de interfaz de usuario
+user_interface_menu() {
 
-fun_bannerOFF () {
+fun_bannerOFF() {
 # Mostrar segundo banner
     clear
     echo -e "$red"
@@ -77,7 +78,7 @@ fun_bannerOFF () {
     echo -e " \n${green} Version coded by: Dzhoni_dev ${reset}"
 }
 
-fun_banner () {
+fun_banner() {
 # Mostrar segundo banner
     clear
     echo -e "$green"
@@ -246,7 +247,7 @@ install_sublime_text_4169() {
             echo -e "\n${checkmark} ${green}Sublime Text 4169 instalado correctamente.${reset}"
 }
 
-pimp_my_kali () {
+pimp_my_kali() {
     echo -e "\n${info} ${cyan}Instalando Pimp My Kali...${reset}\n"
     ##* Url:            https://github.com/Dewalt-arch/pimpmykali
 
@@ -364,8 +365,8 @@ fi
     echo -e "                                              ${green} $versionSCT ${reset}"
     echo -e "\n${indicator} ${yellow}Key  Menú opción:                    ${yellow}Descripción:${reset}"
     echo -e "${indicator} ${yellow}---  ------------                    ${yellow}------------${reset}"
-    echo -e "${indicator} ${green}1. ${white} Actualizar el sistema            ${cyan}(Realiza una actualización de los repositorios)${reset}"
-    echo -e "${indicator} ${green}2. ${white} Full-upgrade del sistema         ${cyan}(Actualiza todo el sistema a la última versión)${reset}"
+    echo -e "${indicator} ${green}1. ${white} Actualizar repositorios          ${cyan}(Realiza una actualización de los repositorios)${reset}"
+    echo -e "${indicator} ${green}2. ${white} Actualizar paquetes              ${cyan}(Actualiza todo el sistema a la última versión)${reset}"
     echo -e "${indicator} ${green}3. ${white} Instalar Pluma                   ${cyan}(Editor de texto ligero)${reset}"
     echo -e "${indicator} ${green}4. ${white} Instalar ipinfo                  ${cyan}(Obtén información sobre IP)${reset}"
     echo -e "${indicator} ${green}5. ${white} Instalar Tor Browser             ${cyan}(Navegador para navegar por la web de forma anónima)${reset}"
@@ -503,4 +504,6 @@ done
 }
 
 # Ejecución del menú principal
-main_menu
+user_interface_menu
+
+# Fin del script
