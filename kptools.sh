@@ -1,4 +1,11 @@
 #!/bin/bash
+#====================================================
+#   SCRIPT:                   Instalador de paqueterias
+#   DESARROLLADO POR:         Jony Rivera (Dzhoni)
+#   FECHA DE ACTUALIZACIÓN:   08-09-2024 
+#   CONTACTO POR TELEGRAMA:   https://t.me/Dzhoni_dev
+#   GITHUB OFICIAL:           https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/Instalador-de-Paqueterias
+#====================================================
 x="ok"
 
 # Paleta de colores
@@ -216,7 +223,7 @@ install_sublime_text_4180() {
 
     # Opcion 1
     
-    sudo cp /opt/sublime_text/sublime_text ./sublime_text.old 
+    sudo cp /opt/sublime_text/sublime_text /opt/sublime_text/sublime_text_$RANDOM.old 
 
     sudo sed -i 's/\x80\x79\x05\x00\x0F\x94\xC2/\xC6\x41\x05\x01\xB2\x00\x90/g' /opt/sublime_text/sublime_text
 
@@ -238,7 +245,7 @@ install_sublime_text_4169() {
             ###- Sublime Text 4 Patcher Linux Build 4169
             
             # Opcion 1
-            sudo cp /opt/sublime_text/sublime_text ./sublime_text.old
+            sudo cp /opt/sublime_text/sublime_text /opt/sublime_text/sublime_text_$RANDOM.old
             sudo sed -i 's/\x80\x78\x05\x00\x0f\x94\xc1/\xc6\x40\x05\x01\x48\x85\xc9/g' /opt/sublime_text/sublime_text
             
             # Opcion 2
@@ -332,10 +339,10 @@ install_auto-bspwm_S4vitar() {
 # Función para mostrar ayuda
 show_help() {
     echo -e "\n${green}Opciones disponibles:${green}\n"
-    echo -e "  -o | --oss             Iniciar el servicio SSH"
-    echo -e "  -p | --pmk             Ejecutar PimpMyKali"
     echo -e "  -a | --auto-bspwm      Ejecutar Auto BSPWM"
     echo -e "  -h | --help            Mostrar este mensaje de ayuda"
+    echo -e "  -o | --oss             Iniciar el servicio SSH"
+    echo -e "  -p | --pmk             Ejecutar PimpMyKali"
     echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
 }
 
