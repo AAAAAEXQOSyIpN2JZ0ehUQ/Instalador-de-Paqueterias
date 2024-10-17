@@ -82,7 +82,7 @@ fun_bannerOFF() {
     echo -e "      ${red}   ID        ${green}:  ${white}$USER${reset}"
     echo -e "      ${red}   Update    ${green}:  ${white}[17-09-2024]${reset}\n"
     echo -e "${green} Instalador de paqueterias - Versión Personalizada${reset}"
-    echo -e " \n${green} Version coded by: Dzhoni_dev ${reset}"
+    echo -e " \n${green} Version codificada por: Jony Rivera (Dzhoni) ${reset}"
 }
 
 fun_banner() {
@@ -99,7 +99,7 @@ fun_banner() {
     echo -e "          l l c:^\^>   l l  l    ${red}   Update    ${green}:  ${white}[17-09-2024]${green}"
     echo -e "          l l          l l  l      "
     echo -e "          l l__________l l /          ${yellow} Instalador de paqueterias - Versión Personalizada${green}"
-    echo -e "          l______________l/____       ${cyan} Versión codificada por: Dzhoni_dev ${green}"
+    echo -e "          l______________l/____       ${cyan} Version codificada por: Jony Rivera (Dzhoni) ${green}"
     echo -e "         /___/$/___/_$/__@__/_/      "
     echo -e "       / = ==== ==== ==== / /)       "
     echo -e "      / ========= === ===/ //        "
@@ -370,7 +370,7 @@ fi
 
     echo -e "\n${bold}${cyan} Seleccione una opción del menú:               Rev: ${green} Arch: amd64 ${reset}"
     echo -e "                                              ${green} $versionSCT ${reset}"
-    echo -e "\n${indicator} ${yellow}Key  Menú opción:                    ${yellow}Descripción:${reset}"
+    echo -e "\n${yellow}    Key  Menú opción:                    ${yellow}Descripción:${reset}"
     echo -e "${indicator} ${yellow}---  ------------                    ${yellow}------------${reset}"
     echo -e "${indicator} ${green}1. ${white} Actualizar repositorios          ${cyan}(Realiza una actualización de los repositorios)${reset}"
     echo -e "${indicator} ${green}2. ${white} Actualizar paquetes              ${cyan}(Actualiza todo el sistema a la última versión)${reset}"
@@ -389,7 +389,9 @@ fi
     echo -e "${indicator} ${green}15.${white} Instalar Sublist3r               ${cyan}(Herramienta de enumeración de subdominios)${reset}"
     echo -e "${bar}"
     echo -e "${indicator} ${green}16.${white} Instalar Auto BSPWN By Yorkox    ${cyan}(Entorno de escritorio profesional para Kali Linux, ParrotOS,Ubuntu)${reset}"
-    echo -e "${indicator} ${green}17.${white} Instalar Auto BSPWN By R1vs3c    ${cyan}(entorno de escritorio profesional para Kali Linux)${reset}"
+    echo -e "${indicator} ${green}17.${white} Instalar Auto BSPWN By R1vs3c    ${cyan}(entorno de escritorio profesional para Kali Linux ${white}-a -auto-bspwm${cyan})${reset}"
+    echo -e "${bar}"
+    echo -e "${indicator} ${green}18.${bg_red} Actualización de Script ${reset}"
     echo -e "${bar}"
     echo -e "${indicator} ${green}0.${white}  Salir                            ${cyan}(Salir del script)${reset}"
     echo -e "\n${barra}"
@@ -481,6 +483,12 @@ fi
             echo -e "\n${process} ${cyan}Instalando Auto BSPWN By R1vs3c...${reset}"
             install_auto-bspwm_S4vitar
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
+            ;;
+        18)
+            echo -e "\n${process} ${cyan}Actualizando Script...${reset}\n"
+            sudo wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/Instalador-de-Paqueterias/main/install.sh -O - | sudo bash
+            sudo rm -rf wget-log*
+            echo -ne "\n${bold}${red}ENTER ${yellow}para volver al ${green}MENU!${reset}"; read
             ;;
         0)
             echo -e "\n${info} ${cyan}Saliendo...${reset}"
