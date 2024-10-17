@@ -54,6 +54,7 @@ Este script permite ejecutar varios comandos útiles para actualizar tu sistema 
 - Mousepad: Editor de texto ligero.
 - LibreWolf: Navegador web centrado en la privacidad.
 - Sublime Text: Editor de código multiplataforma.
+- Entre otras herramientas.
 
 ## :star2: Características 
 
@@ -75,13 +76,13 @@ Puedes ajustar los comandos y configuraciones del script según tus necesidades 
 
 | Icono            | Nombre              | Descripción                               |
 |------------------|---------------------|-------------------------------------------|
-| :file_folder:    | imágenes            | Carpeta para imágenes del proyecto        |
+| :file_folder:    | Imágenes            | Carpeta para imágenes del proyecto        |
+| :file_folder:    | Install             | Carpeta para scripts de instalación       |
 | :page_facing_up: | .gitattributes      | Archivo para configuración de Git         |
 | :page_facing_up: | LICENSE             | Archivo de licencia del proyecto          |
 | :book:           | README.md           | Archivo de documentación principal        |
 | :package:        | install.sh          | Script de instalación automatizada        |
 | :page_facing_up: | kptools.sh          | Herramienta de utilidades                 |
-| :page_facing_up: | wifite_help_ES.txt  | Archivo de ayuda en español para Wifite   |
 
 ## :email: Contacto 
 * :busts_in_silhouette: **Dzhoni**: [GitHub](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/Instalador-de-Paqueterias) - Desarrollador Instalador de Paqueterías 
