@@ -391,7 +391,7 @@ fi
     echo -e "${indicator} ${green}16.${white} Instalar Auto BSPWN By Yorkox    ${cyan}(Entorno de escritorio profesional para Kali Linux, ParrotOS,Ubuntu)${reset}"
     echo -e "${indicator} ${green}17.${white} Instalar Auto BSPWN By R1vs3c    ${cyan}(entorno de escritorio profesional para Kali Linux ${white}-a -auto-bspwm${cyan})${reset}"
     echo -e "${bar}"
-    echo -e "${indicator} ${green}18.${bg_red} Actualización de Script ${reset}"
+    echo -e "${indicator} ${green}18.${bg_blue} Actualización de Script ${reset}"
     echo -e "${bar}"
     echo -e "${indicator} ${green}0.${white}  Salir                            ${cyan}(Salir del script)${reset}"
     echo -e "\n${barra}"
@@ -494,6 +494,13 @@ fi
             echo -e "\n${info} ${cyan}Saliendo...${reset}"
             exit 0
             ;;
+        -a | --auto-bspwm)
+            cd /home/$(whoami)/Desktop/auto-bspwm && ./setup.sh
+            echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
+            ;;
+        -h | --help)
+            show_help
+            ;;
         -o | --oss)
             sudo service ssh start 
             sudo service ssh status
@@ -502,13 +509,6 @@ fi
         -p | --pmk)
             cd /opt/pimpmykali && sudo ./pimpmykali.sh
             echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
-            ;;
-        -a | --auto-bspwm)
-            cd /home/$(whoami)/Desktop/auto-bspwm && ./setup.sh
-            echo -ne "\n${bold}${red}ENTER ${yellow}para volver a ${green}MENU!${reset}"; read
-            ;;
-        -h | --help)
-            show_help
             ;;
         *)
             echo -e "\n${error} ${red}Opción no válida, por favor intente de nuevo.${reset}"
