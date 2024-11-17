@@ -28,7 +28,7 @@ cd
 
 ## :computer: Instalación en una Línea
 ```bash
-sudo wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/Instalador-de-Paqueterias/main/install.sh -O - | sudo bash
+sudo wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/Instalador-de-Paqueterias/main/install.sh -O - | sudo bash && sudo rm -rf wget-log*
 ```
 
 ## :rocket: Modo de Uso
