@@ -20,7 +20,7 @@ ls -ltha
 ## :key: Acceso Directo
 ```bash
 cd
-echo "cd /opt/Instalador-de-Paqueterias && sudo ./kptools.sh" > kptools
+echo "cd /opt/Instalador-de-Paqueterias && ./kptools.sh" > kptools
 sudo chmod +x kptools
 sudo mv kptools /usr/local/bin/
 cd
