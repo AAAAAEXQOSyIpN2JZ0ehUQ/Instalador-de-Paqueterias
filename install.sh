@@ -11,3 +11,5 @@ echo "cd /opt/Instalador-de-Paqueterias && sudo ./kptools.sh" > kptools
 sudo chmod +x kptools
 sudo mv kptools /usr/local/bin/
 cd
+
+# Fin del script
